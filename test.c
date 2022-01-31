@@ -2,6 +2,6 @@
 
 int main(void)
 {
-    //test code upload
+    //test code
     printf("test git");
 }
