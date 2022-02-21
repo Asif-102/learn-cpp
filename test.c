@@ -3,5 +3,5 @@
 int main(void)
 {
     //test code
-    printf("test git");
+    printf("test");
 }
