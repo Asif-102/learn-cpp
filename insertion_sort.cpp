@@ -34,6 +34,7 @@ int main(void)
         while(array[j] > key && j >= 0)
         {
             array[j+1] = array[j];
+            printArray(array, size);
             j--;
         }
         array[j+1] = key;
