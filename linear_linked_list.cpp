@@ -31,6 +31,13 @@ void insertAtTaile(Node* &head, int value)
     temp->Next = newNode;
 }
 
+void insertAtHead(Node* &head, int value)
+{
+    Node* newNode = new Node(value);
+    newNode->Next = head;
+    head = newNode;
+}
+
 void display(Node* node)
 {
     while(node != NULL)
@@ -50,6 +57,7 @@ int main(void)
     insertAtTaile(head, 5);
     insertAtTaile(head, 8);
     insertAtTaile(head, 9);
+    insertAtHead(head, 1000);
 
     display(head);
 }
