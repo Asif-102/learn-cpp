@@ -64,6 +64,23 @@ public:
         }
         return arr[idx];
     }
+    void Pop_back(){
+        if(sz == 0){
+            cout << "Current size is 0\n";
+            return;
+        }
+        sz--;
+    }
+    void Erase(int pos){
+        if(pos >= sz){
+            cout << "Position doesn't exist.\n";
+            return;
+        }
+        for(int i = pos+1; i < sz; i++){
+            arr[i-1] = arr[i];
+        }
+        sz--;
+    }
 };
 
 int main(){
