@@ -35,6 +35,16 @@ public:
         arr[idx] = x;
         idx++;
     }
+    void Insert(int pos, int val){
+        if(idx == sz){
+            Increase_size();
+        }
+        for(int i = idx; i >= pos; i--){
+            arr[i] = arr[i-1];
+        }
+        arr[pos] = val;
+        idx++;
+    }
     // O(sz)
     void Print(){
         for(int i = 0; i < idx; i++){
@@ -62,10 +72,15 @@ int main(){
     a.Push_back(20);
     a.Push_back(30);
     a.Push_back(40);
-    // a.Print();
-    cout << a.getSize() << '\n';
-    for(int i = 0; i < a.getSize(); i++){
-        cout << a.getElement(i) << " ";
-    }
+    a.Print();
+    // cout << a.getSize() << '\n';
+    // for(int i = 0; i < a.getSize(); i++){
+    //     cout << a.getElement(i) << " ";
+    // }
+    a.Insert(1, 99);
+    a.Print();
+    a.Push_back(88);
+    a.Push_back(77);
+    a.Print();
     return 0;
 }
